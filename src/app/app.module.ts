@@ -3,14 +3,19 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 
+import { NicknameBackgroundComponent } from '@components/nickname-background/nickname-background.component';
+import { SeparatorComponent } from '@components/separator/separator.component';
+import { StackComponent } from '@components/stack/stack.component';
+
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    NicknameBackgroundComponent,
+    SeparatorComponent,
+    StackComponent,
   ],
-  imports: [
-    BrowserModule
-  ],
+  imports: [BrowserModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
