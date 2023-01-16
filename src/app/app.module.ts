@@ -1,19 +1,12 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
+import { BackgroundTextComponent } from '@components/background-text/background-text.component';
+
 import { AppComponent } from './app.component';
 
-import { NicknameBackgroundComponent } from '@components/nickname-background/nickname-background.component';
-import { SeparatorComponent } from '@components/separator/separator.component';
-import { StackComponent } from '@components/stack/stack.component';
-
 @NgModule({
-  declarations: [
-    AppComponent,
-    NicknameBackgroundComponent,
-    SeparatorComponent,
-    StackComponent,
-  ],
+  declarations: [AppComponent, BackgroundTextComponent],
   imports: [BrowserModule],
   providers: [],
   bootstrap: [AppComponent],

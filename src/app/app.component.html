@@ -1,24 +1,190 @@
-<div class="content">
-  <app-nickname-background></app-nickname-background>
-  <div class="avatar-block">
-    <div class="avatar-preview">
-      <div class="background"></div>
-      <div class="image">
-        <img src="assets/images/avatar.png" alt="" draggable="false" />
+<div id="content">
+  <div class="container">
+    <div class="page title">
+      <div class="page-title">
+        <h1 [ngStyle]="{ color: selectedTheme.titleColor }">nabsv</h1>
       </div>
     </div>
-  </div>
-  <div class="about-me-block">
-    <div class="wrapper">
-      <div class="title">
-        <h3>about me</h3>
-      </div>
-      <div class="description">
-        <p>description text</p>
+    <div
+      [ngStyle]="{ backgroundColor: selectedTheme.descriptionColor }"
+      class="page description first-page"
+    >
+      <div
+        [ngStyle]="{ backgroundColor: selectedTheme.wrapperColor }"
+        class="wrapper"
+      >
+        <div class="background-images">
+          <div class="light-circle light-circle-one"></div>
+          <div class="light-circle light-circle-two"></div>
+        </div>
+        <div class="page-title">
+          <h1>
+            Hi<span class="text-image">
+              <img
+                src="assets/icons/waving_hand.svg"
+                alt="waving hand icon"
+                draggable="false"
+              /> </span
+            >i'm<br />
+            <span class="big-text"> Bogdan Volodin </span>
+          </h1>
+        </div>
       </div>
     </div>
+    <div class="page title">
+      <div class="page-title">
+        <h1 [ngStyle]="{ color: selectedTheme.titleColor }">about me</h1>
+      </div>
+    </div>
+    <div
+      [ngStyle]="{ backgroundColor: selectedTheme.descriptionColor }"
+      class="page description images-page"
+    >
+      <div
+        [ngStyle]="{ backgroundColor: selectedTheme.wrapperColor }"
+        class="wrapper"
+      >
+        <div class="background-images">
+          <div class="image image-first">
+            <img
+              [src]="selectedTheme.descriptionMemojiPath"
+              [alt]="selectedTheme.lastPageMemojiAlt"
+              draggable="false"
+            />
+          </div>
+          <div class="image image-second">
+            <img
+              [src]="selectedTheme.descriptionMemojiPath"
+              [alt]="selectedTheme.lastPageMemojiAlt"
+              draggable="false"
+            />
+          </div>
+          <div class="light-circle light-circle-one"></div>
+          <div class="light-circle light-circle-two"></div>
+        </div>
+        <div class="page-title">
+          <h1>
+            I'm frontend dev <br />
+            18 y.o
+          </h1>
+        </div>
+      </div>
+    </div>
+    <div class="page title">
+      <div class="page-title">
+        <h1 [ngStyle]="{ color: selectedTheme.titleColor }">my stack</h1>
+      </div>
+    </div>
+    <div
+      [ngStyle]="{ backgroundColor: selectedTheme.descriptionColor }"
+      class="page description stack"
+    >
+      <div
+        [ngStyle]="{ backgroundColor: selectedTheme.wrapperColor }"
+        class="wrapper"
+      >
+        <div class="background-text">
+          <app-background-text backgroundText="nabsv"></app-background-text>
+        </div>
+        <div class="background-images">
+          <div class="light-circle light-circle-one"></div>
+        </div>
+        <div class="page-content">
+          <h1>rxjs</h1>
+          <h1>angular</h1>
+          <h1>git</h1>
+          <h1>typescript</h1>
+        </div>
+      </div>
+    </div>
+    <div class="page title">
+      <div class="page-title">
+        <h1 [ngStyle]="{ color: selectedTheme.titleColor }">works</h1>
+      </div>
+    </div>
+    <div
+      [ngStyle]="{ backgroundColor: selectedTheme.descriptionColor }"
+      class="page description works"
+    >
+      <div
+        [ngStyle]="{ backgroundColor: selectedTheme.wrapperColor }"
+        class="wrapper"
+      >
+        <div class="background-text">
+          <app-background-text
+            backgroundText="RAZOOM.ART"
+          ></app-background-text>
+        </div>
+        <div class="background-images">
+          <div class="light-circle light-circle-one"></div>
+        </div>
+        <div class="page-content">
+          <a href="https://github.com/nnabse/cloud-frontend" target="_blank">
+            <h1>cloud storage</h1>
+          </a>
+
+          <a href="https://github.com/razoomart" target="_blank">
+            <h1>razoom.art</h1>
+          </a>
+
+          <h1>cryptonews</h1>
+        </div>
+      </div>
+    </div>
+    <div class="page title">
+      <div class="page-title">
+        <h1 [ngStyle]="{ color: selectedTheme.titleColor }">links</h1>
+      </div>
+    </div>
+    <div
+      [ngStyle]="{ backgroundColor: selectedTheme.descriptionColor }"
+      class="page description links"
+    >
+      <div
+        [ngStyle]="{ backgroundColor: selectedTheme.wrapperColor }"
+        class="wrapper"
+      >
+        <div class="background-text">
+          <app-background-text backgroundText="nabsv"></app-background-text>
+        </div>
+        <div class="background-images">
+          <div class="light-circle light-circle-one"></div>
+        </div>
+        <div class="page-content">
+          <a href="https://github.com/nnabse" target="_blank">
+            <h1>github</h1>
+          </a>
+
+          <a href="https://t.me/nabse" target="_blank">
+            <h1>telegram</h1>
+          </a>
+
+          <a href="https://instagram.com/nnabsv" target="_blank">
+            <h1>instagram</h1>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="page title last-page">
+      <div [ngStyle]="{ color: selectedTheme.titleColor }" class="page-title">
+        <h1>
+          designed by <a href="https://t.me/hav3npsd" target="_blank">hav3n</a>
+        </h1>
+        <br />
+        <h1>special for nabsv</h1>
+        <img
+          [src]="selectedTheme.lastPageMemojiPath"
+          [alt]="selectedTheme.lastPageMemojiAlt"
+          draggable="false"
+        />
+      </div>
+    </div>
+    <footer id="footer">
+      <div [ngStyle]="{ color: selectedTheme.titleColor }" class="content">
+        <h1>razoom.art</h1>
+        <h1>nabsv. all right reserved</h1>
+        <h1>hav3n</h1>
+      </div>
+    </footer>
   </div>
-  <app-separator></app-separator>
-  <app-stack></app-stack>
-  <app-separator></app-separator>
 </div>

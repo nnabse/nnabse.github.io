@@ -1,99 +1,293 @@
-.content {
+@font-face {
+  font-family: MonumentExtended;
+  src: url("/assets/fonts/MonumentExtended-Regular.otf") format("opentype");
+}
+
+@font-face {
+  font-family: HalvarRegular;
+  src: url("/assets/fonts/HalvarBreit-Rg.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: HalvarXBold;
+  src: url("/assets/fonts/HalvarBreit-XBd.ttf") format("truetype");
+}
+
+#content {
   width: 100%;
   height: 100%;
-  color: white;
-  .avatar-block {
-    position: absolute;
+
+  .container {
     width: 100%;
     height: 100%;
-    top: 0;
-    .avatar-preview {
+
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+
+    .page {
+      scroll-snap-align: start;
+      scroll-snap-stop: always;
       display: flex;
       justify-content: center;
       align-items: center;
-      position: relative;
       width: 100%;
       height: 100%;
-      z-index: 1;
-      .background {
-        position: absolute;
-        width: 250px;
-        height: 250px;
-        backdrop-filter: blur(5px);
-        background: radial-gradient(#fffdfd, rgba(217, 217, 217, 0));
-        border-radius: 50%;
-        z-index: 2;
+      position: relative;
+    }
+
+    .title {
+      background-color: #ffffff;
+
+      .page-title {
+        h1 {
+          font-size: 10vw;
+          font-weight: 400;
+        }
       }
-      .image {
-        position: relative;
-        z-index: 3;
-        width: 250px;
-        height: 250px;
+    }
+
+    .description {
+      .wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: calc(100% - 4.166666666666667vw);
+        height: calc(100% - 3.5714285714285716vw);
+        background: #415fff;
+        box-shadow: 0 0 1.7857142857142858vw rgba(0, 0, 0, 0.2);
+        border-radius: 1.7857142857142858vw;
+
+        .page-title {
+          h1 {
+            color: #ffffff;
+            font-family: HalvarXBold;
+            font-size: 5vw;
+            text-transform: uppercase;
+            text-align: center;
+          }
+
+          .text-image {
+            img {
+              width: 8.928571428571429vw;
+              height: 7.083333333333333vw;
+            }
+          }
+
+          .big-text {
+            font-size: 8.714285714285714vw;
+          }
+        }
+
+        .page-content {
+          a {
+            text-decoration: none;
+          }
+
+          h1 {
+            color: #ffffff;
+            font-family: HalvarXBold;
+            font-size: 5.928571428571429vw;
+            text-transform: uppercase;
+            text-align: center;
+            line-height: 1.5;
+          }
+        }
+      }
+    }
+
+    .images-page .wrapper {
+      .background-images {
+        .image-first {
+          position: absolute;
+          width: 11.904761904761905vw;
+          height: 11.904761904761905vw;
+          left: 15.476190476190476vw;
+          top: 4.166666666666667vw;
+          transform: rotate(30deg);
+
+          img {
+            width: 11.904761904761905vw;
+            height: 11.904761904761905vw;
+          }
+        }
+
+        .image-second {
+          position: absolute;
+          width: 11.904761904761905vw;
+          height: 11.904761904761905vw;
+          left: 70.38095238095238vw;
+          top: 32.904761904761905vw;
+          transform: rotate(15deg);
+
+          img {
+            width: 11.904761904761905vw;
+            height: 11.904761904761905vw;
+          }
+        }
+
+        .light-circle-one {
+          position: absolute;
+          width: 80vw;
+          height: 80vw;
+          left: -15.476190476190476vw;
+          top: -20.166666666666667vw;
+
+          background: radial-gradient(
+              39.29% 39.29% at 50% 50%,
+              rgba(255, 255, 255, 0.5) 0%,
+              rgba(217, 217, 217, 0) 100%
+          );
+        }
+
+        .light-circle-two {
+          position: absolute;
+          width: 70vw;
+          height: 70vw;
+          left: 28.476190476190476vw;
+          top: 5.166666666666667vw;
+
+          background: radial-gradient(
+              39.29% 39.29% at 50% 50%,
+              rgba(255, 255, 255, 0.5) 0%,
+              rgba(217, 217, 217, 0) 100%
+          );
+        }
+      }
+
+      .page-title {
+        h1 {
+          font-size: 8vw;
+        }
+      }
+    }
+
+    .first-page {
+      .wrapper {
+        .background-images {
+          .light-circle-one {
+            position: absolute;
+            width: 60vw;
+            height: 60vw;
+            left: -15.476190476190476vw;
+            top: 0.166666666666667vw;
+          }
+        }
+
+        .page-title {
+          h1 {
+            font-size: 10vw;
+            font-family: HalvarXBold;
+            text-transform: none;
+          }
+
+          .text-image {
+            width: 10vw;
+            height: 10vw;
+
+            img {
+              width: 11vw;
+              height: 10vw;
+            }
+          }
+        }
+      }
+    }
+
+    .last-page {
+      height: calc(100% - 5.9523809523809526vw);
+
+      .background-images {
+        .light-circle-one {
+          width: 80vw;
+          height: 50vw;
+        }
+      }
+
+      .page-title {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        a {
+          color: #0d34ff;
+          text-decoration: none;
+        }
+
+        h1 {
+          font-size: 5vw;
+        }
+
         img {
-          width: 100%;
-          height: 100%;
-          border-radius: 50%;
+          width: 8.928571428571429vw;
+          height: 8.928571428571429vw;
+          margin-top: 2vw;
         }
       }
     }
-  }
-  .about-me-block {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: #0a0a0a30;
-    .wrapper {
-      width: calc(100% - 20vw);
-      height: 45%;
-      border-radius: 20px;
-      display: flex;
-      transition: 0.3s;
-      border: none;
-      flex-direction: column;
-      box-shadow: none;
-      background: #262626;
-      .title {
-        text-align: center;
-        color: #a0a0a0;
-        h3 {
-          font-family: "Inter", sans-serif;
-          font-size: 2.8rem;
-          font-weight: 800;
-        }
-      }
-      .description {
-        text-align: center;
-        font-size: 2rem;
-        font-weight: 100;
-        color: #a0a0a0;
-        p {
-          margin: 0;
-        }
-      }
-    }
-    .wrapper:hover {
-      box-shadow: 0 0 50px #ffffff20;
-      transition: 0.3s;
-    }
-  }
-}
 
-@keyframes marquee {
-  from {
-    transform: translateZ(0);
-  }
-  to {
-    transform: translate3d(-100%, 0, 0);
-  }
-}
+    .page-title,
+    .page-content {
+      z-index: 1;
+    }
 
-@keyframes marquee-left {
-  from {
-    transform: translateZ(0);
-  }
-  to {
-    transform: translate3d(-100%, 0, 0);
+    .background-text {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      z-index: 0;
+    }
+
+    .background-images {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      z-index: 0;
+
+      .light-circle-one,
+      .light-circle-two {
+        position: absolute;
+        height: 50vw;
+        background: radial-gradient(
+            39.29% 39.29% at 50% 50%,
+            rgba(255, 255, 255, 0.5) 0%,
+            rgba(217, 217, 217, 0) 100%
+        );
+      }
+
+      .light-circle-one {
+        width: 60vw;
+        left: 20%;
+        top: 1%;
+      }
+
+      .light-circle-two {
+        width: 50vw;
+        left: 40.476190476190476vw;
+        top: 0.166666666666667vw;
+      }
+    }
+
+    #footer {
+      width: 100%;
+      height: 5.9523809523809526vw;
+
+      padding: 0 10.416666666666666vw;
+
+      .content {
+        width: 100%;
+        height: 5.9523809523809526vw;
+        align-items: center;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        h1 {
+          font-family: HalvarRegular;
+          font-weight: 500;
+          font-size: 1.1904761904761905vw;
+        }
+      }
+    }
   }
 }

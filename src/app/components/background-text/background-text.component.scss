@@ -1,0 +1,25 @@
+.container {
+  position: absolute;
+  overflow: hidden;
+  vertical-align: baseline;
+  height: 100%;
+  width: 100%;
+
+  .background-text {
+    position: relative;
+    display: inline-block;
+    white-space: nowrap;
+
+    h1 {
+      font-weight: 400;
+      font-size: 8.928571428571429vw;
+      color: transparent;
+      line-height: 1;
+      -webkit-text-stroke-width: 0.05952380952380952vw;
+      -webkit-text-stroke-color: #f1efef;
+      display: inline-block;
+      padding: 0 1.5vw 0 0;
+      margin: 0;
+    }
+  }
+}
