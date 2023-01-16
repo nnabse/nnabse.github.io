@@ -23,3 +23,33 @@
     }
   }
 }
+
+@media screen and (max-width: 1700px) {
+  .container .background-text h1 {
+    font-size: 16vw;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .container .background-text h1 {
+    line-height: 20vw;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .container .background-text h1 {
+    line-height: 30vw;
+  }
+}
+
+@media screen and (max-width: 460px) {
+  .container .background-text h1 {
+    line-height: 50vw;
+  }
+}
+
+@media screen and (max-width: 300px) {
+  .container .background-text h1 {
+    line-height: 100vw;
+  }
+}
