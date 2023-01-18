@@ -60,8 +60,8 @@ export class AppComponent implements OnInit {
       wrapperColor: '#FF4141',
       descriptionMemojiPath: 'assets/icons/strawberry.png',
       descriptionMemojiAlt: 'strawberry icon',
-      lastPageMemojiPath: 'assets/icons/rose.png',
-      lastPageMemojiAlt: 'rose icon',
+      lastPageMemojiPath: 'assets/icons/red_heart.png',
+      lastPageMemojiAlt: 'red heart icon',
     },
     {
       titleColor: '#0DA8FF',
