@@ -104,6 +104,8 @@
           left: 15.476190476190476vw;
           top: 10vh;
 
+          animation: imageAnim 15s infinite ease-in-out;
+
           img {
             width: 11.904761904761905vw;
             height: 11.904761904761905vw;
@@ -117,6 +119,8 @@
           left: 70.38095238095238vw;
           top: 55vh;
           transform: rotate(50deg);
+
+          animation: imageAnim2 15s infinite ease-in-out;
 
           img {
             width: 11.904761904761905vw;
@@ -209,6 +213,7 @@
           width: 8.928571428571429vw;
           height: 8.928571428571429vw;
           margin-top: 2vw;
+          animation: heartAnim 1s infinite ease-in-out;
         }
       }
     }
@@ -538,5 +543,45 @@
         }
       }
     }
+  }
+}
+
+@keyframes imageAnim {
+  0% {
+    transform: translate(-5px, 10px) rotate(10deg);
+  }
+
+  50% {
+    transform: translate(0, 0) rotate(0);
+  }
+
+  100% {
+    transform: translate(-5px, 10px) rotate(10deg);
+  }
+}
+
+@keyframes imageAnim2 {
+  0% {
+    transform: translate(5px, -10px) rotate(-10deg);
+  }
+
+  50% {
+    transform: translate(0, 0) rotate(0);
+  }
+
+  100% {
+    transform: translate(5px, -10px) rotate(-10deg);
+  }
+}
+
+@keyframes heartAnim {
+  0% {
+    transform: scale(1.05);
+  }
+  50% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.05);
   }
 }
